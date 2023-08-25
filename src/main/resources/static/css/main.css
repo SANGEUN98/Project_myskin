@@ -1,0 +1,4 @@
+/* 페이지 본문 스타일 */
+.contents_wrap { position:relative; max-width:1400px; box-sizing:border-box; padding:20px; background:#fff; font: normal 12px sans-serif, malgun Gothic; line-height:160%; color:#222;  }
+.contents_wrap:after {  display:block; clear:both; content:""; }
+

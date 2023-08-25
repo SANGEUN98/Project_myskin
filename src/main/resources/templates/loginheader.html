@@ -1,0 +1,29 @@
+<header xmlns="http://www.w3.org/1999/html">
+    <h1><a th:href="@{/}">마이스킨</a></h1>
+    <div class="small_menu">
+<!--        <label for="search">-->
+<!--            <input type="text" placeholder="화장품명" id="search">-->
+<!--            <input type="submit" value="" class="fa fa-search">-->
+<!--        </label>-->
+        <span class="qick_icon">
+    <!--                    <a th:href="@{/form/login}">로그인</a>-->
+    <!--                    <a th:href="@{/form/members/join}">회원가입</a>-->
+         <form th:action="@{/logout}" method="post">
+             <span class="fa fa-user"></span>  <em th:text="${member.name} +'님'" style="font:normal 13px/50px sans-serif">회원</em>
+
+                <button  onclick="location.href='index.html'" type="submit" style="font:normal 13px/50px sans-serif; background: none">
+                로그아웃
+                </button>
+            </form>
+    <!--                    <a th:href="@{/logout}">로그아웃</a>-->
+                </span>
+
+    </div>
+</header>
+<nav>
+    <ul>
+        <li><a th:href="@{/}">Skin Type</a></li>
+        <li><a th:href="@{/}">Brand</a></li>
+        <li><a th:href="@{/}">Best</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,21 @@
+<dl class="goods view">
+    <dt>
+        <img th:src="@{'/images/prd/prd_'+${item.pid}+'.jpg'}" src="/images/prd/prd_1.jpg" alt="prd_1">
+    </dt>
+    <dd class="brand">
+        <span th:class="${item.brand}" class="drg"  >닥터G</span>
+        <span class="cate" th:text="${item.brand}" >색조</span>
+    </dd>
+    <dd class="cate">
+        <span class="skin" th:text="${item.cate}">기초</span>
+    </dd>
+    <dd class="title" th:text="${item.itemName}">그린 마일드 업 선 플러스</dd>
+    <dd class="skin_type">
+        <span class="normal" th:text="${item.skin}">중성</span>
+    </dd>
+    <dd class="price" th:text="${item.price}">24,000원</dd>
+    <dd class="btn">
+        <a th:href="@{/}" class="cart">목록보기</a>
+        <a href="#" class="buy">리뷰작성</a>
+    </dd>
+</dl>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace에 Mapper 인터페이스를 지정해야 한다. -->
+<mapper namespace="TeamA.myskin.mybatis.ItemMapper">
+
+
+    <select id="findById" resultType="Item">
+        select pid, item_name, brand, cate, price, skin
+        from item
+        where pid = #{pid}
+    </select>
+
+    <select id="findAll" resultType="Item">
+        select pid, item_name, brand, cate, price, skin
+        from item
+        <where>
+            <if test="itemName != null and itemName != ''">
+                AND item_name LIKE '%' || #{itemName} || '%'
+            </if>
+        </where>
+    </select>
+</mapper>

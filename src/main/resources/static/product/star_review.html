@@ -1,0 +1,97 @@
+<!-- 1) 전체 평균 리뷰별점 조회  -->
+<div class="total_review">
+    <h2>상품후기</h2>
+    <dl>
+       <dt>
+           <div class="star_review">
+            <span class="fa fa-star"> </span>
+            <span class="fa fa-star-half-full"> </span>
+            <span class="fa fa-star-o"> </span>
+            <span class="fa fa-star-o"> </span>
+            <span class="fa fa-star-o"> </span><br>
+            <em class="star_grade">사용자 총 평점 <br> 1.7/5</em>
+        </div>
+       </dt>
+        <dd>
+        <!-- 리뷰별점 등록 -->
+        <form action="#" th:action method="post">
+            <div class="review_form_wrap">
+                <h2>리뷰를 남겨주세요!</h2>
+                <div class="review_grade_star">
+                    <input type="radio" name="review_grade" value="1.0" id="review_grade_1" >
+                    <input type="radio" name="review_grade" value="2.0" id="review_grade_2" >
+                    <input type="radio" name="review_grade" value="3.0" id="review_grade_3" >
+                    <input type="radio" name="review_grade" value="4.0" id="review_grade_4" >
+                    <input type="radio" name="review_grade" value="5.0" id="review_grade_5" >
+                </div>
+                <h2></h2>
+                <textarea name="">
+                    제품 리뷰를 남겨주세요.(~100자 미만)
+                 </textarea>
+                <button class="btn_add" type="submit">리뷰 등록</button>
+            </div>
+        </dd>
+        </form>
+        <!-- 리뷰별점 등록 끝 -->
+    </dl>
+</div>
+<!-- //1) 전체 평균 리뷰별점 조회 끝 -->
+
+<!-- 2) 리뷰 리스트 -->
+<ul class="review_list_wrap">
+    <!-- 리뷰 글 1개 -->
+    <li>
+        <dl>
+            <dt>
+                <div class="star_review">
+                    <span class="fa fa-star"> </span>
+                    <span class="fa fa-star-half-full"> </span>
+                    <span class="fa fa-star-o"> </span>
+                    <span class="fa fa-star-o"> </span>
+                    <span class="fa fa-star-o"> </span>
+                    <em class="star_grade">5.0</em>
+                </div>
+                <div class="reviewer">
+                    <span class="name">ttt*****</span>
+                    <span class="date">2023/06/01</span>
+                    <span class="btn"> <!-- th:onclick="|location.href='@{/items/{itemId}/edit(itemId=${item.id})}'|" -->
+                        <button class="btn_basic" onclick="location.href='#'" type="button">수정</button>
+                        <button class="btn_basic" onclick="location.href='#'" type="button">삭제</button>
+                    </span>
+                </div>
+            </dt>
+            <dd>
+                가성비 굿굿 좋아요~~~ 가성비 굿굿 좋아요~~~ 가성비 굿굿 좋아요~~~ 가성비 굿굿 좋아요~~~
+            </dd>
+        </dl>
+    </li>
+    <!-- // 리뷰 글 1개 -->
+    <!-- 리뷰 글 2개 -->
+    <li>
+        <dl>
+            <dt>
+                <div class="star_review">
+                    <span class="fa fa-star"> </span>
+                    <span class="fa fa-star-half-full"> </span>
+                    <span class="fa fa-star-o"> </span>
+                    <span class="fa fa-star-o"> </span>
+                    <span class="fa fa-star-o"> </span>
+                    <em class="star_grade">1.5</em>
+                </div>
+                <div class="reviewer">
+                    <span class="name">ttt*****</span>
+                    <span class="date">2023/06/01</span>
+                    <span class="btn"> <!-- th:onclick="|location.href='@{/items/{itemId}/edit(itemId=${item.id})}'|" -->
+                        <button class="btn_basic" onclick="location.href='#'" type="button">수정</button>
+                        <button class="btn_basic" onclick="location.href='#'" type="button">삭제</button>
+                    </span>
+                </div>
+            </dt>
+            <dd> 추천해요~ </dd>
+        </dl>
+    </li>
+    <!-- // 리뷰 글 2개 -->
+</ul>
+
+<!-- //2) 리뷰 리스트  -->
+

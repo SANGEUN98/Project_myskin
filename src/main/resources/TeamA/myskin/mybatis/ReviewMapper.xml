@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace에 Mapper 인터페이스를 지정해야 한다. -->
+<mapper namespace="TeamA.myskin.mybatis.ReviewMapper">
+
+
+    <select id="findById" resultType="Review">
+        select rid, pid, review, grade_review, inroll_date, login_id
+        from review
+        where pid = #{pid}
+    </select>
+    <select id="findAll" resultType="Review">
+        select rid, pid, review, grade_review, inroll_date, login_id
+        from review
+        where pid = #{pid}
+    </select>
+</mapper>
